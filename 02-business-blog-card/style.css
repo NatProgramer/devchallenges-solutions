@@ -1,0 +1,91 @@
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  height: 95vh;
+  background-color: #F2F5F9;
+}
+
+h2 {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.main--card {
+  width: 100%;
+  max-width: 420px;
+  max-height: 530px;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.main--card header {
+  width: 100%;
+  position: relative;
+}
+
+.main--card header .main--card-img {
+  width: 100%;
+  height: 99%;
+}
+
+.main--card header .white-overlay {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.main--card main {
+  padding: 0 40px 0 30px;
+}
+
+.main--card footer {
+  display: flex;
+  padding: 25px 30px 25px 30px;
+  border-top: solid #F2F5F9 1px;
+  gap: 8px;
+  align-items: center;
+}
+
+.user-info p {
+  font-weight: 600;
+  margin: 0;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #F2F5F9;
+}
+
+.avatar img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+span, .main--card main p {
+  margin-top: 8px;
+  line-height: 24px;
+  color: #677489
+}
+
+.user-info span {
+  font-size: .8rem;
+  font-weight: 500;
+}
