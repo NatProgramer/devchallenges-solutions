@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #121826;
+  color-scheme: dark light;
+  overflow: hidden;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.form-card {
+  display: flex;
+  width: 100%;
+  max-width: 455px;
+  padding: 15px 40px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #212936;
+  flex-direction: column;
+}
+
+.form-card h1 {
+  color: #E5E7EB;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+
+.form-card label {
+  width: 100%;
+  color: #A1A1A9;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.blur-radial {
+  position: absolute;
+  z-index: -1;
+}
+
+.blur-radial:nth-child(1) {
+  top: 50%;
+  left: 70%;
+}
+
+.blur-radial:nth-child(n + 2) {
+  bottom: 50%;
+  right: 70%;
+}
+
+.step-one input {
+  margin: 8px 0px 25px 0px;
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #4D5562;
+  border-radius: 14px;
+  font-size: 0.875rem;
+  transition: border 250ms;
+  background-color: transparent;
+}
+
+.step-one input::placeholder {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4D5562;
+}
+
+.step-one input:focus-visible {
+  border: 2px solid #845EEE; 
+  color: #FFFFFF;
+  outline: none;
+  font-weight: 500;
+}
+
+.step-one {
+  display: grid;
+  gap: 25px;
+}
+
+.step-button {
+  margin: 20px auto;
+  padding: 14px 42px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  background: linear-gradient(to bottom, #845EEE, #652CD1);
+  transition: transform 200ms, scale 250ms;
+}
+
+.step-button:active {
+  transform: scale(5px);
+}
+
+.step-button:active {
+  transform: translateY(2px);
+}
+
+
+.steps-info {
+  display: flex;
+  font-size: 0.875rem;
+  color: #4D5562;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-circle {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #652CD1;
+}
+
+.step-circle--incompleted {
+  background-color: #394150;
+}
+
+.step-circle--active::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: -5px;
+  right: -5px;
+  border-radius: 50%;
+  background-color: #845EEE70;
+}
