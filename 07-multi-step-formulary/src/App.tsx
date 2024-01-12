@@ -2,14 +2,17 @@ import { useState } from 'react'
 import blurRadial from '../public/blur-radial.svg'
 import StepOne from './components/StepOne'
 import StepIndicator from './components/StepIndicator'
+import StepTwo from './components/StepTwo'
+import StepThree from './components/StepThree'
 
 export default function App () {
+  // const [formResponses, setFormResponses] = useState({})
   const [step, setStep] = useState<{ totalSteps: number, actualStep: number }>({
     totalSteps: 3,
     actualStep: 1
   })
 
-  const constinueStep = () => {
+  const continueStep = () => {
     if (step.actualStep + 1 > step.totalSteps) return
 
     setStep({
@@ -23,18 +26,18 @@ export default function App () {
     if (step.actualStep < stepNum) return 'step-circle--incompleted'
     return ''
   }
-  // <StepOne continueStep={constinueStep} />
+
   return (
     <>
       <img className='blur-radial' src={blurRadial} alt=" " />
       <main>
         <article className="form-card">
-          <article className="step-two">
-            <h1>Which topics you are interested in?</h1>
-            <form onSubmit={e => { e.preventDefault(); constinueStep() }}>
-              <button className='step-button'>Continue</button>
-            </form>
-          </article>
+          { step.actualStep === 1
+            ? <StepOne continueStep={continueStep} />
+            : step.actualStep === 2
+              ? <StepTwo continueStep={continueStep} />
+              : <StepThree continueStep={continueStep} />
+          }
         </article>
         <div className='steps-info'>
           <p>Step {step.actualStep} of {step.totalSteps}</p>
