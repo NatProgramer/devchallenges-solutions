@@ -151,13 +151,13 @@ main {
   margin: 28px 0px 25px 0px;
 }
 
-.step-two ul {
+.step-two ul, .step-three ul {
   display: grid;
   padding: 0;
   gap: 15px;
 }
 
-.step-two li {
+.step-two li, .step-three li {
   list-style: none;
   width: 100%;
   padding: 18px 12px;
@@ -166,10 +166,11 @@ main {
   color: #A1A1A9;
   font-size: 1rem;
   background: #394150;
+  transition: background 300ms, border 250ms;
   cursor: pointer;
 }
 
-.step-two .item-active {
+.step-two .item-active, .step-three .item-active {
   color: #E5E7EB;
   font-weight: 600;
   background: #652CD1;
@@ -189,4 +190,26 @@ main {
 .blur-radial:nth-child(n + 2) {
   bottom: 50%;
   right: 70%;
+}
+
+.step-three h1 {
+  margin: 28px 0px 25px 0px;
+}
+
+.step-three p {
+  margin: 24px 0px;
+  font-size: 1.10rem;
+  font-weight: 600;
+  color: #4D5562;
+}
+
+.step-three p span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #E5E7EB
+}
+
+.step-three li span {
+  color: #E5E7EB;
+  font-weight: 600;
 }
